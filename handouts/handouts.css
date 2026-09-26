@@ -50,12 +50,19 @@ a{color:var(--accent)}
 .hint{color:var(--ink-3);font-size:14px;margin-top:14px}
 .dl{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:var(--on-accent)!important;border-radius:999px;padding:5px 14px;font-weight:700;font-size:14px;text-decoration:none}
 .dl-row{display:flex;justify-content:flex-end;margin:0 0 12px}
+.slp{display:none}
 .intro .dl{margin-top:14px}
 @media (max-width:560px){.doc{padding:20px 16px}.doc h1{font-size:24px}}
 @page{size:A4;margin:15mm 14mm}
 @media print{
   :root,:root:not([data-theme="light"]),:root[data-theme="dark"]{color-scheme:light;--bg:#fff;--panel:#fff;--panel-2:#f3f3f3;--ink:#000;--ink-2:#222;--ink-3:#555;--line:#bbb}
-  .bar,.pn,.hint,.dl{display:none}.wrap{padding:0}.doc{padding:0}
+  .bar,.pn,.hint,.dl{display:none}
+  .slp{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1.5px solid #000;border-radius:8px;padding:8px 12px;margin:0 0 18px;break-inside:avoid}
+  .slp-t{display:grid;gap:1px;font-size:13px;line-height:1.35}
+  .slp-t b{font-family:var(--display);font-size:16px}
+  .slp-t .u{font-family:var(--mono);font-weight:700;font-size:13px}
+  .slp .qr{width:22mm;height:22mm;flex:none}
+  .slp .qr svg{width:100%;height:100%;display:block}.wrap{padding:0}.doc{padding:0}
   .doc pre,.doc table,.doc li,.doc .highlight{break-inside:avoid}.doc h1,.doc h2,.doc h3,.doc .markdown-heading,.doc .markdown-heading+p,.doc p:has(+ .highlight),.doc p:has(+ pre){break-after:avoid;page-break-after:avoid}
 }
 /* index */
